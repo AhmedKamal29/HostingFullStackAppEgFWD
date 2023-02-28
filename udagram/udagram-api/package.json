@@ -1,19 +1,19 @@
 {
-  "name": "udagram-api",
+  "name": "udagram-api-deploy",
   "version": "2.0.0",
   "description": "",
   "engines": {
-    "node": "14.15.0"
+    "node": "16.0.0"
   },
-  "main": "server.ts",
+  "main": "server.js",
   "scripts": {
-    "start": "node ./www/server.js",
+    "start": "node server.js",
     "tsc": "npx tsc",
     "dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rimraf www/ || true",
     "deploy": "npm run build && eb list && eb use udagram-api-dev && eb deploy",
-    "build": "npm install . && npm run clean && tsc && cp -rf src/config www/config && cp .npmrc www/.npmrc && cp package.json www/package.json && cd www && zip -r Archive.zip . && cd ..",
+    "build": "npm install . && npm run clean && tsc && copyfiles src/config www/config && copyfiles .npmrc www/.npmrc && copyfiles package.json www/ && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "keywords": [],
@@ -48,6 +48,7 @@
     "@typescript-eslint/parser": "^2.19.2",
     "chai": "^4.2.0",
     "chai-http": "^4.2.1",
+    "copyfiles": "^2.4.1",
     "eslint": "^6.8.0",
     "eslint-config-google": "^0.14.0",
     "mocha": "^10.2.0",
