@@ -12,7 +12,7 @@
     "dev": "npx ts-node-dev --respawn --transpile-only ./src/server.ts",
     "prod": "npx tsc && node ./www/server.js",
     "clean": "rimraf www/ || true",
-    "deploy": "eb init udagram-api --platform node.js --region us-east-1 && eb create --sample udagram-api-dev && eb use udagram-api-dev && npm run build && eb deploy udagram-api-dev",
+    "deploy": "eb init udagram-api --platform node.js --region us-east-1 && eb use udagram-api-dev-deploy && npm run build && eb deploy udagram-api-dev-deploy",
     "build": "npm install . && npm run clean && tsc && copyfiles src/config www/config && copyfiles .npmrc www/.npmrc && copyfiles package.json www/ && cd www && zip -r Archive.zip . && cd ..",
     "test": "echo \"Error: no test specified\" && exit 1"
   },
