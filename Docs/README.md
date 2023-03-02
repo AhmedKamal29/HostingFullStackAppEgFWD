@@ -1,11 +1,9 @@
-<h1>Introduction</h1>
-<h3>Hosting a FullStack Application on AWS </h3>
-<p>A full stack aplication hosting made on AWS for educational purposes for Udacity's Advanced full Stack development Nanodegree</p>
-<h1>Project Overview</h1>
-<p>The project requires you to host a full stack application on AWS along with creating a fully functional pipline on circle ci</p>
-<h1>Instructions For Running The Project</h1>
+<h1>Hosting a FullStack Application on AWS </h1>
+<h2>Project Documentation</h2>
 
 <h1>Infrastructure description</h1>
+
+![deployment infra](https://user-images.githubusercontent.com/53512084/222455094-d09e47c3-5872-48dd-9649-e39faf1181b5.jpg)
 
 <h1>App Dependencies</h1>
 <h3>Udagram-API Package.json Dependancies</h3>
@@ -99,6 +97,9 @@
 ```
 
 <h1>Circle CI Pipeline process</h1>
+
+![circleci diagram](https://user-images.githubusercontent.com/53512084/222455165-56f378a6-e80b-4b8e-a497-31102a16ccb6.jpg)
+
 1. When the developer pushes a new code to the repo the Circle ci is triggred to begin automating the build and deployment. 
 2. We begin first with the building where the pipline begins setting u the build environment by doing the following: 
     - Preparing the env variables 
