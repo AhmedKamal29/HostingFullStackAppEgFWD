@@ -25,8 +25,12 @@ AWS_REGION
 AWS_PROFILE
 JWT_SECRET
 URL
-AWS_ACCESS_KEY_ID
-AWS_SECRET_ACCESS_KEY
+```
+
+<h3>Application Link</h3>
+
+```
+http://udagram-egfwd-hosting.s3-website-us-east-1.amazonaws.com/
 ```
 
 <h1>Technologies used</h1>
