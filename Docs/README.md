@@ -114,3 +114,5 @@
     - Configure AWS CLI with the access key and secret key
     - Begin deploying the app based on the configuration yml located in the project
 5. The App is successfully deployed
+
+<h1 align="center">No you are all set and ready good to go😉</h1>
